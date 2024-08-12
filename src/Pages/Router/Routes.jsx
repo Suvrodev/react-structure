@@ -4,7 +4,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Main from "../Main/Main";
-import Home from "../Home/Home";
+import Home from "../Home/Home/Home";
 import Banner from "../BannerPage/Banner/Banner";
 import BannerPage from "../BannerPage/BannerPage";
 

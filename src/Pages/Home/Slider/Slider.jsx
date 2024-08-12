@@ -8,7 +8,7 @@ const Slider = () => {
     axios.get("/images.json").then((res) => setImages(res.data));
   }, []);
 
-  console.log(images);
+  //   console.log(images);
 
   return (
     <div>
