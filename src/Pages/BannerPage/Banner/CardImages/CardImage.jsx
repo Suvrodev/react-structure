@@ -21,25 +21,30 @@ const CardImage = () => {
     axios.get("/wmimg.json").then((res) => setImages(res.data));
   }, []);
 
-  console.log(images);
+  //   console.log(images);
   return (
     <div>
       <div className="flex">
-        <div className="w-[40%] flex items-center justify-center">
+        <div className="w-[40%] flex items-center justify-center ">
           <Swiper
             effect={"cards"}
             grabCursor={true}
             modules={[EffectCards]}
-            className="mySwiper cardSize"
+            className="mySwiper cardSize "
           >
             {images.map((img, idx) => (
-              <SwiperSlide key={idx}>
-                <img
-                  src={img?.image}
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </SwiperSlide>
+              <div key={img?.id} className="relative">
+                <SwiperSlide key={idx}>
+                  <img
+                    src={img?.image}
+                    alt=""
+                    className="h-full w-full object-contain"
+                  />
+                  <div className="cardImageNumber ">
+                    <p className="text-white z-10 text-2xl">{idx + 1}</p>
+                  </div>
+                </SwiperSlide>
+              </div>
             ))}
           </Swiper>
         </div>
@@ -53,3 +58,7 @@ const CardImage = () => {
 };
 
 export default CardImage;
+
+/**
+ * urls: https://swiperjs.com/react
+ */

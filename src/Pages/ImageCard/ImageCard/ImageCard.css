@@ -1,0 +1,37 @@
+.deerImages {
+  display: flex;
+  gap: 55px;
+}
+.deerImage {
+  width: 250px;
+  height: 250px;
+}
+
+.shadow {
+  box-shadow: 10px 7px 15px #d21369;
+  /* filter: drop-shadow(16px 7px 8px #d21369); */
+}
+.filterShadow {
+  /* box-shadow: 16px 7px 8px #d21369; */
+  filter: drop-shadow(16px 7px 8px #d21369);
+}
+
+.babyContainer {
+  margin: 0 auto;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.babyImage {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid yellow;
+  transition: all ease-in-out 0.5s;
+}
+
+.babyImage:hover {
+  width: 250px;
+  /* scale: 1.1; */
+}

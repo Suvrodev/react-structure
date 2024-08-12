@@ -1,7 +1,26 @@
+/* Own CSS start*/
 .cardSize {
   width: 400px !important;
   height: 80% !important;
 }
+
+.cardImageNumber {
+  position: absolute !important;
+  bottom: 5px !important;
+  left: 50% !important;
+  transform: translate(-50%, 0);
+  font-size: 16px;
+  background-color: palevioletred;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+/*Own CSS end */
+
 .swiper {
   width: 240px;
   height: 320px;
