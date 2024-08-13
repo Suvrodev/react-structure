@@ -66,3 +66,8 @@ const YoutubeVideo = () => {
 };
 
 export default YoutubeVideo;
+
+/**
+ * urls: https://daisyui.com/components/collapse/
+ * urls: https://daisyui.com/components/accordion/
+ */
