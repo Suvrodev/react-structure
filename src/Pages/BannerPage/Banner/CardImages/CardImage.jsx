@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./CardImage.css";
 import HoverImage from "./HoverImage/HoverImage";
 import axios from "axios";
@@ -13,15 +13,14 @@ import "swiper/css/effect-cards";
 // import required modules
 import { EffectCards } from "swiper/modules";
 
-const hoveImageLink = "https://i.ibb.co/CBfsNmd/w-1.jpg";
-
 const CardImage = () => {
+  const imageRef = useRef("");
+
   const [images, setImages] = useState([]);
   useEffect(() => {
     axios.get("/wmimg.json").then((res) => setImages(res.data));
   }, []);
 
-  //   console.log(images);
   return (
     <div>
       <div className="flex">
@@ -36,6 +35,7 @@ const CardImage = () => {
               <div key={img?.id} className="relative">
                 <SwiperSlide key={idx}>
                   <img
+                    ref={imageRef}
                     src={img?.image}
                     alt=""
                     className="h-full w-full object-contain"
