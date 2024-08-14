@@ -27,3 +27,9 @@
     background-position-x: -20%;
   }
 }
+
+.darkMode {
+}
+.lightMode {
+  background-color: white;
+}

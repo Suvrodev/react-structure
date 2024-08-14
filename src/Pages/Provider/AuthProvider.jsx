@@ -56,10 +56,37 @@ const AuthProvider = ({ children }) => {
    * Check Current User end
    */
 
+  /**Dark Light Mode start */
+  const [colorDep, setColorDep] = useState(true);
+  const [color, setColor] = useState("dark");
+  useEffect(() => {
+    const mode = localStorage.getItem("mode");
+    // console.log("mode: ", mode);
+    if (mode == "light") {
+      setColor("light");
+    }
+    if (mode == "dark") {
+      setColor("dark");
+    }
+  }, [colorDep]);
+
+  const handleSetDarkMode = () => {
+    localStorage.setItem("mode", "dark");
+    setColorDep(!colorDep);
+  };
+  const handleSetLightMode = () => {
+    localStorage.setItem("mode", "light");
+    setColorDep(!colorDep);
+  };
+  /**Dark Light Mode end */
+
   const authInfo = {
     user,
     handleLogIn,
     handleLogOut,
+    handleSetDarkMode,
+    handleSetLightMode,
+    color,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

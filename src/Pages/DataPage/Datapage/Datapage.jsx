@@ -38,8 +38,8 @@ const Datapage = () => {
         setLoading(false);
       });
   }, [startPage]);
-  console.log("Data: ", datas);
-  console.log("Data Length: ", datas.length);
+  //   console.log("Data: ", datas);
+  //   console.log("Data Length: ", datas.length);
 
   if (datas.length == 0) {
     return (

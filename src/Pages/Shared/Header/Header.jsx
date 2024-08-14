@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import me from "../../../assets/Me/Me.jpg";
 import GoogleIcon from "@mui/icons-material/Google";
 import { AuthContext } from "../../Provider/AuthProvider";
+import ColorMode from "./ColorMode";
 
 const Header = () => {
   const { handleLogIn, user, handleLogOut } = useContext(AuthContext);
@@ -54,7 +55,8 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <div className="w-[25%]  flex justify-end">
+        <div className="w-[25%]  flex justify-end items-center">
+          <ColorMode />
           {user ? (
             <div className="flex items-center gap-4">
               <h1>{user?.displayName}</h1>
