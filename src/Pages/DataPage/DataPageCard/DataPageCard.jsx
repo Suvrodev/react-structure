@@ -1,5 +1,5 @@
 import React from "react";
-import { goLink } from "../../../assets/JSFile/goLink";
+import { goLink } from "../../../JSFile/goLink";
 
 const DataPageCard = ({ data }) => {
   //   console.log(data);

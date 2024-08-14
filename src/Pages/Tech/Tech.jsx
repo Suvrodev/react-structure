@@ -3,7 +3,7 @@ import InputNumber from "./InputNumber/InputNumber";
 import DuelRange from "./DuelRange/DuelRange";
 import SingleRange from "./SingleRange/SingleRange";
 import TruncateDialog from "./TruncateDialog/TruncateDialog";
-import titleAndGoUp from "../../assets/JSFile/titleAndGoUp";
+import titleAndGoUp from "../../JSFile/titleAndGoUp";
 import SideBarr from "./SideBarr/SideBarr";
 
 const Tech = () => {

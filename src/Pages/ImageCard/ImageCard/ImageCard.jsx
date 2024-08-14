@@ -4,7 +4,7 @@ import deer1 from "../../../assets/Deer/Deer.jpg";
 import deer2 from "../../../assets/Deer/Deer2.png";
 
 import React, { useEffect, useState } from "react";
-import titleAndGoUp from "../../../assets/JSFile/titleAndGoUp";
+import titleAndGoUp from "../../../JSFile/titleAndGoUp";
 
 const ImageCard = () => {
   titleAndGoUp("Image");
@@ -17,6 +17,14 @@ const ImageCard = () => {
     <div className="text-white">
       <section className="mt">
         <h1 className="text-2xl font-bold my-10">Hover Image</h1>
+
+        <div className="my-20">
+          <div className="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
 
         <div className="babyContainer">
           {babyImages.map((baby, idx) => (

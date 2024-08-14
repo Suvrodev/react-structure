@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "../Slider/Slider";
 import YoutubeVideo from "../Youtube/YoutubeVideo/YoutubeVideo";
-import titleAndGoUp from "../../../assets/JSFile/titleAndGoUp";
 import Testimonial from "../Testimonial/Testimonial";
+import titleAndGoUp from "../../../JSFile/titleAndGoUp";
 
 const Home = () => {
   titleAndGoUp("Home");

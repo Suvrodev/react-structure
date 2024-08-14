@@ -5,7 +5,8 @@ import bannerImage from "../../../assets/Banner/Banner.png";
 import parrot from "../../../assets/Lottie/Parrot.json";
 import Lottie from "lottie-react";
 import { Typewriter } from "react-simple-typewriter";
-import titleAndGoUp from "../../../assets/JSFile/titleAndGoUp";
+import titleAndGoUp from "../../../JSFile/titleAndGoUp";
+
 const Banner = () => {
   titleAndGoUp("Banner");
   return (

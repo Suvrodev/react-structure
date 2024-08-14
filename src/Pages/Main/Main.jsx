@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../Shared/Header/Header";
 import MobileHeader from "../Shared/MobileHeader/MobileHeader";
-import GoToTop from "../GoToTop/GoToTop";
 import { AuthContext } from "../Provider/AuthProvider";
+import GoToTop from "../GoToTop/GoToTop";
+import CrispChat from "../../JSFile/CrispChat";
+// import CrispChat from "../../JSFile/CrispChat";
 
 const Main = () => {
   const { color } = useContext(AuthContext);
@@ -21,6 +23,7 @@ const Main = () => {
         <Outlet />
       </div>
       <GoToTop />
+      <CrispChat />
     </div>
   );
 };
