@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const ColorMode = () => {
   const { handleSetDarkMode, handleSetLightMode, color } =
     useContext(AuthContext);
-  console.log("color: ", color);
+  // console.log("color: ", color);
   return (
     <div>
       {color == "dark" && (

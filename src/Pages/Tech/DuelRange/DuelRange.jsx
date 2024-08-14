@@ -27,10 +27,10 @@ const DuelRange = () => {
 
   return (
     <div>
-      <div className="   ">
+      <div className="  w-full ">
         <h1 className="text-white font-bold text-xl">Price</h1>
 
-        <div className="mt-10 w-6/12">
+        <div className="mt-10 w-full">
           <ReactSlider
             className="horizontal-slider"
             thumbClassName="example-thumb"
@@ -49,7 +49,7 @@ const DuelRange = () => {
           />
         </div>
 
-        <div className=" border w-4/12 p-5 my-10 flex gap-4 justify-center">
+        <div className=" border  p-5 my-10 flex gap-4 justify-center">
           <p> Min Price: {minPrice} </p>
           <p> Max Price: {maxPrice} </p>
         </div>

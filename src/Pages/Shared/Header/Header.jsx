@@ -6,12 +6,13 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import ColorMode from "./ColorMode";
 
 const Header = () => {
-  const { handleLogIn, user, handleLogOut } = useContext(AuthContext);
+  const { handleLogIn, user, handleLogOut, successfullyToast } =
+    useContext(AuthContext);
 
   const handleGoogle = () => {
     handleLogIn().then((result) => {
       const loggedUser = result?.user;
-      console.log(loggedUser);
+      successfullyToast("Login Successfully");
     });
   };
   return (

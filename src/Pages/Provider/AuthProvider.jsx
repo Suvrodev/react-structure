@@ -7,6 +7,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { app } from "../../firebase/firebase.config";
+import Swal from "sweetalert2";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -56,6 +57,22 @@ const AuthProvider = ({ children }) => {
    * Check Current User end
    */
 
+  /**
+   * Toast start
+   */
+  const successfullyToast = (text) => {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: text,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+  /**
+   * Toast end
+   */
+
   /**Dark Light Mode start */
   const [colorDep, setColorDep] = useState(true);
   const [color, setColor] = useState("dark");
@@ -88,6 +105,7 @@ const AuthProvider = ({ children }) => {
     handleSetDarkMode,
     handleSetLightMode,
     color,
+    successfullyToast,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
