@@ -8,6 +8,7 @@ import Home from "../Home/Home/Home";
 import Banner from "../BannerPage/Banner/Banner";
 import BannerPage from "../BannerPage/BannerPage";
 import ImageCard from "../ImageCard/ImageCard/ImageCard";
+import Datapage from "../DataPage/Datapage/Datapage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/banner",
         element: <BannerPage />,
+      },
+      {
+        path: "/data",
+        element: <Datapage />,
       },
       {
         path: "/imagecard",

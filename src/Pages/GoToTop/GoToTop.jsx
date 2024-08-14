@@ -23,7 +23,7 @@ const GoToTop = () => {
     <div>
       {showTopButton && (
         <div
-          className="fixed bottom-[30px] right-[50px] w-[30px] h-[30px] bg-green-500 rounded-md flex items-center justify-center text-white p-5"
+          className="fixed bottom-[30px] left-[60px] w-[50px] h-[50px] bg-green-500 rounded-md flex items-center justify-center text-white p-5"
           onClick={handleGoTop}
         >
           <ArrowUpwardIcon />
