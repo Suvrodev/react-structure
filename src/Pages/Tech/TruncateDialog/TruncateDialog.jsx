@@ -16,7 +16,8 @@ const TruncateDialog = () => {
     <div className="text-white">
       <dialog id="my_modal_3" ref={modalRef} className="modal w-full  ">
         <div className="modal-box p-0 w-full max-w-5xl h-full ">
-          <form method="dialog ">
+          <form method="dialog">
+            {/* dialog এর পরে space থাকা যাবে না */}
             <button className="btn btn-circle btn-ghost absolute right-2 top-2 bg-red-600 text-white z-10">
               ✕
             </button>

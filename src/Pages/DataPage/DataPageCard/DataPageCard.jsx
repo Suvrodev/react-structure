@@ -4,8 +4,9 @@ import { goLink } from "../../../assets/JSFile/goLink";
 const DataPageCard = ({ data }) => {
   //   console.log(data);
   const { id, albumId, thumbnailUrl, title, url } = data;
+
   return (
-    <div className="border rounded-md h-[380px]">
+    <div className="border rounded-md h-[380px] w-[410px] ">
       <div className="flex justify-center my-2 ">
         <img
           src={thumbnailUrl}

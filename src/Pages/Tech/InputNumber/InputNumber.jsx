@@ -14,8 +14,8 @@ const InputNumber = () => {
     <div>
       <div>
         <h1 className="text-xl text-white mb-4">Take any Number: </h1>
-        <div>
-          <div className="flex gap-4">
+        <div className="flex gap-10 justify-center items-center">
+          <div className="flex gap-4 items-center">
             <input
               type="number"
               name=""
@@ -29,10 +29,16 @@ const InputNumber = () => {
             </button>
           </div>
           {number && (
-            <p className="w-[450px] border p-2 mt-4 bg-green-600 text-white font-bold text-center">
+            <div className="w-[450px] border p-2  bg-green-600 text-white font-bold text-center relative">
               {" "}
               {number}{" "}
-            </p>
+              <div
+                className="absolute w-[35px] h-[35px] bg-red-600 flex items-center justify-center rounded-full -top-4 -right-5"
+                onClick={() => setNumber(null)}
+              >
+                X
+              </div>
+            </div>
           )}
         </div>
       </div>

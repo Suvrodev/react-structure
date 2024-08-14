@@ -4,6 +4,7 @@ import DuelRange from "./DuelRange/DuelRange";
 import SingleRange from "./SingleRange/SingleRange";
 import TruncateDialog from "./TruncateDialog/TruncateDialog";
 import titleAndGoUp from "../../assets/JSFile/titleAndGoUp";
+import SideBarr from "./SideBarr/SideBarr";
 
 const Tech = () => {
   titleAndGoUp("Tech");
@@ -16,11 +17,12 @@ const Tech = () => {
         </div>
         <div className="w-[50%]">
           <SingleRange />
+          <TruncateDialog />
         </div>
       </div>
 
       <div>
-        <TruncateDialog />
+        <SideBarr />
       </div>
     </div>
   );

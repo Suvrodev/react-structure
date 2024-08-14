@@ -104,4 +104,5 @@ export default Slider;
 
 /**
  * urls: https://axios-http.com/docs/intro
+ * urls: https://github.com/Suvrodev/react-structure/blob/main/src/Pages/Home/Slider/Slider.jsx
  */

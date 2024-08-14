@@ -39,12 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/tech",
-        element: (
-          <PrivateRoute>
-            {" "}
-            <Tech />
-          </PrivateRoute>
-        ),
+        element: <Tech />,
       },
     ],
   },
