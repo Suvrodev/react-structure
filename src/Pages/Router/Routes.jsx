@@ -11,6 +11,7 @@ import ImageCard from "../ImageCard/ImageCard/ImageCard";
 import Datapage from "../DataPage/Datapage/Datapage";
 import Tech from "../Tech/Tech";
 import PrivateRoute from "./PrivateRoute";
+import SamePage from "../SamePage/SamePage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/tech",
         element: <Tech />,
+      },
+      {
+        path: "/page",
+        element: <SamePage />,
       },
     ],
   },

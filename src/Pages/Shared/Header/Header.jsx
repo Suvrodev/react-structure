@@ -21,7 +21,7 @@ const Header = () => {
         <div className=" w-[25%]">
           <img src={me} alt="" className="w-[75px] h-[75px] rounded-full" />
         </div>
-        <div className="flex justify-center  gap-4 font-bold w-[50%] bg-green-500">
+        <div className="flex justify-center  gap-4 font-bold w-[50%] ">
           <NavLink
             className={({ isActive }) => (isActive ? "text-blue-500" : "acLk ")}
             to="/home"
