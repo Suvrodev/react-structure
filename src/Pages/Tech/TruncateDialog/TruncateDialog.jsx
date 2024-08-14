@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import DialogBox from "./DialogBox";
 
 const TruncateDialog = () => {
   const modalRef = useRef(null);
@@ -10,17 +11,19 @@ const TruncateDialog = () => {
 
   const fullText =
     " This is a long piece of text that will be truncated with an ellipsis if it overflows the container.";
+
   return (
     <div className="text-white">
-      <dialog id="my_modal_3" ref={modalRef} className="modal w-full ">
-        <div className="modal-box p-0 w-full max-w-5xl ">
-          <form method="dialog">
+      <dialog id="my_modal_3" ref={modalRef} className="modal w-full  ">
+        <div className="modal-box p-0 w-full max-w-5xl h-full ">
+          <form method="dialog ">
             <button className="btn btn-circle btn-ghost absolute right-2 top-2 bg-red-600 text-white z-10">
               ✕
             </button>
           </form>
-          <div className="flex items-center justify-center w-full h-[150px] p-5">
-            {fullText}
+
+          <div className="flex items-center justify-center h-full">
+            <DialogBox text={fullText} />
           </div>
         </div>
       </dialog>

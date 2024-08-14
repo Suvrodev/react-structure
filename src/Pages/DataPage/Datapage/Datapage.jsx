@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import DataPageCard from "../DataPageCard/DataPageCard";
 import SkelitonCard from "../DataPageCard/SkelitonCard";
 import { useInView } from "react-intersection-observer";
+import titleAndGoUp from "../../../assets/JSFile/titleAndGoUp";
 
 const Datapage = () => {
+  titleAndGoUp("Data");
   const { ref, inView } = useInView({
     threshold: 0,
   });
