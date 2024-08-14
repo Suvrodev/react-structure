@@ -2,13 +2,29 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DataPageCard from "../DataPageCard/DataPageCard";
 import SkelitonCard from "../DataPageCard/SkelitonCard";
+import { useInView } from "react-intersection-observer";
 
 const Datapage = () => {
-  const [datas, setDatas] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+  //   console.log("Inview: ", inView);
 
   const [startPage, setStartPage] = useState(0);
   const [limitPage, setLimitPage] = useState(9);
+
+  useEffect(() => {
+    if (inView) {
+      setStartPage((startPage) => startPage + 9);
+      setLimitPage((limitPage) => limitPage + 9);
+      console.log("Start: ", startPage);
+      console.log("Limit: ", limitPage);
+    }
+  }, [inView]);
+
+  const [datas, setDatas] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     setLoading(true);
     axios
@@ -16,12 +32,16 @@ const Datapage = () => {
         `https://jsonplaceholder.typicode.com/photos?_start=${startPage}&_limit=${limitPage}`
       )
       .then((res) => {
-        setDatas(res.data);
+        const comeData = res.data;
+        const newData = [...datas, ...comeData];
+        setDatas(newData);
         setLoading(false);
       });
-  }, []);
+  }, [startPage]);
+  console.log("Data: ", datas);
+  console.log("Data Length: ", datas.length);
 
-  if (loading) {
+  if (datas.length == 0) {
     return (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <SkelitonCard />
@@ -38,11 +58,16 @@ const Datapage = () => {
     <div className="text-white">
       <h1 className="my-10 text-xl font-bold text-white">Data Page</h1>
       <div>
-        {datas && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {datas.map((data, idx) => (
-              <DataPageCard key={idx} data={data} />
-            ))}
+        {datas.length > 0 && (
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {datas.map((data, idx) => (
+                <DataPageCard key={idx} data={data} />
+              ))}
+            </div>
+            <div className="text-center mt-4" ref={ref}>
+              <span className="loading loading-spinner loading-lg"></span>
+            </div>
           </div>
         )}
       </div>
