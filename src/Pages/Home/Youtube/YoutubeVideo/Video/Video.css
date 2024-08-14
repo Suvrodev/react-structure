@@ -1,7 +1,7 @@
 .react-player {
   width: 100% !important;
 }
-.sklLoading {
+/* .sklLoading {
   background-color: #e1e1e1;
   background: linear-gradient(
       100deg,
@@ -20,4 +20,4 @@
   to {
     background-position-x: -20%;
   }
-}
+} */
