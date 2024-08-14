@@ -46,6 +46,14 @@ const Header = () => {
           >
             Image Card
           </NavLink>
+          {user && (
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
+              to="/tech"
+            >
+              Tech
+            </NavLink>
+          )}
 
           <NavLink
             className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}

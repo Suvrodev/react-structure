@@ -9,6 +9,8 @@ import Banner from "../BannerPage/Banner/Banner";
 import BannerPage from "../BannerPage/BannerPage";
 import ImageCard from "../ImageCard/ImageCard/ImageCard";
 import Datapage from "../DataPage/Datapage/Datapage";
+import Tech from "../Tech/Tech";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,15 @@ const router = createBrowserRouter([
       {
         path: "/imagecard",
         element: <ImageCard />,
+      },
+      {
+        path: "/tech",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Tech />
+          </PrivateRoute>
+        ),
       },
     ],
   },

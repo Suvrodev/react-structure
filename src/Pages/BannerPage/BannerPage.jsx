@@ -14,16 +14,6 @@ const BannerPage = () => {
         <div>
           <CountUp />
         </div>
-
-        <div>
-          <h1 className="text-xl text-white mb-4">Take any Number: </h1>
-          <input
-            type="number"
-            name=""
-            id=""
-            className="bg-transparent border p-2 w-[450px] removeDefaultIcon text-white"
-          />
-        </div>
       </div>
     </div>
   );
