@@ -19,13 +19,17 @@ const Blog = () => {
         />
       </div>
 
-      <div className="bg-white w-10/12 p-5 rounded-md my-10 mx-auto text-black">
-        {content}
-      </div>
+      {content && (
+        <div className="bg-white w-full p-5 rounded-md my-10 mx-auto text-black">
+          <div dangerouslySetInnerHTML={{ __html: content }} />
+        </div>
+      )}
 
-      <div className="bg-white w-10/12 p-5 rounded-md my-10 mx-auto text-black">
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-      </div>
+      {content && (
+        <div className="bg-white w-full p-5 rounded-md my-10 mx-auto text-black">
+          {content}
+        </div>
+      )}
     </div>
   );
 };
