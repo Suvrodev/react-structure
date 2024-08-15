@@ -12,6 +12,7 @@ import Datapage from "../DataPage/Datapage/Datapage";
 import Tech from "../Tech/Tech";
 import PrivateRoute from "./PrivateRoute";
 import SamePage from "../SamePage/SamePage";
+import Blog from "../Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/page",
         element: <SamePage />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
     ],
   },

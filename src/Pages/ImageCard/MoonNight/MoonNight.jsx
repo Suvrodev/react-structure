@@ -14,7 +14,7 @@ const MoonNight = () => {
     threshold: 0,
   });
 
-  console.log("In view: ", inView);
+  // console.log("In view: ", inView);
   useEffect(() => {
     if (audioRef.current) {
       if (inView) {

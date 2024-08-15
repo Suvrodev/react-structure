@@ -65,6 +65,15 @@ const Header = () => {
             </NavLink>
           )}
 
+          {user && (
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
+              to="/blog"
+            >
+              Blog
+            </NavLink>
+          )}
+
           <NavLink
             className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
             to="/contact"
