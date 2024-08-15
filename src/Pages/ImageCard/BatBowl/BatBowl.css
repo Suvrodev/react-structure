@@ -1,0 +1,12 @@
+.bat {
+  /* animation: flipSides 2s infinite alternate; */
+  transform: scaleX(-1);
+}
+/* @keyframes flipSides {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  100% {
+    transform: translateX(-100%) scaleX(-1);
+  }
+} */

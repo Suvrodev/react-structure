@@ -6,6 +6,7 @@ import deer2 from "../../../assets/Deer/Deer2.png";
 import React, { useEffect, useState } from "react";
 import titleAndGoUp from "../../../JSFile/titleAndGoUp";
 import ImagesCard from "../ImagesCard/ImagesCard";
+import BatBowl from "../BatBowl/BatBowl";
 
 const ImageCard = () => {
   titleAndGoUp("Image");
@@ -59,6 +60,12 @@ const ImageCard = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <BatBowl />
         </div>
       </section>
     </div>
