@@ -21,13 +21,13 @@ const ImageCard = () => {
       <section className="mt">
         <h1 className="text-2xl font-bold my-10">Hover Image</h1>
 
-        <div className="my-20">
+        {/* <div className="my-20">
           <div className="menu-icon">
             <span></span>
             <span></span>
             <span></span>
           </div>
-        </div>
+        </div> */}
 
         <div className="babyContainer">
           {babyImages.map((baby, idx) => (

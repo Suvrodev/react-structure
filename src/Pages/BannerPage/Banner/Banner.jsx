@@ -10,7 +10,7 @@ import titleAndGoUp from "../../../JSFile/titleAndGoUp";
 const Banner = () => {
   titleAndGoUp("Banner");
   return (
-    <div className={`w-full h-[450px] banner rounded-lg `}>
+    <div className={`w-full h-[200px] md:h-[500px] banner rounded-lg `}>
       <div className="flex h-full ">
         <div className=" flex  justify-center items-center w-6/12 h-full z-10 text-white">
           <span className="font-bold text-orange-500 relative top-16 left-24">

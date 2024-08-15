@@ -10,7 +10,7 @@ import CrispChat from "../../JSFile/CrispChat";
 const Main = () => {
   const { color } = useContext(AuthContext);
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="hidden md:block">
         <Header />
       </div>
@@ -18,7 +18,9 @@ const Main = () => {
         <MobileHeader />
       </div>
       <div
-        className={`max-w-7xl mx-auto ${color == "light" ? "bg-white" : ""}`}
+        className={`max-w-7xl mx-auto mt-20 md:mt-0 ${
+          color == "light" ? "bg-white" : ""
+        }`}
       >
         <Outlet />
       </div>

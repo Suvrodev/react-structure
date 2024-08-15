@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-const HoverImage = () => {
-  const hoveImageLink = "https://i.ibb.co/CBfsNmd/w-1.jpg";
+const HoverImage = ({ hoveImageLink }) => {
+  // console.log("New Hover Image: ", hoveImageLink);
+  // const hoveImageLink = "https://i.ibb.co/CBfsNmd/w-1.jpg";
 
   const [isZoomed, setIsZoomed] = useState(false);
 
@@ -22,32 +23,21 @@ const HoverImage = () => {
   };
 
   return (
-    <div>
-      <style>
-        {`
-            #container {
-                box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-                height: 100%;
-                width: 100%;
-                overflow: hidden;
-            }
-
-            .fp {
-                width: 100%;
-                height: 100%;
-                transform: ${isZoomed ? "scale(2.5)" : "scale(1)"};
-            }
-            `}
-      </style>
-
+    <div className="h-full w-full">
       <div
-        className=""
-        id="container"
+        className="h-full w-full overflow-hidden shadow-lg"
+        // id="container"
         onMouseMove={onZoom}
         onMouseOver={onZoom}
         onMouseLeave={offZoom}
       >
-        <img src={hoveImageLink} alt="" className="fp" />
+        <img
+          src={hoveImageLink}
+          alt=""
+          className={` w-full h-full object-contain ${
+            isZoomed ? "scale-[2.5]" : "scale-100"
+          }`}
+        />
       </div>
     </div>
   );

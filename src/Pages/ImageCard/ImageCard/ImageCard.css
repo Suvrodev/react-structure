@@ -37,7 +37,7 @@
 }
 
 /* 3 bar start */
-.menu-icon {
+/* .menu-icon {
   width: 30px;
   height: 20px;
   display: flex;
@@ -64,4 +64,4 @@
 
 .menu-icon:hover span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
-}
+} */
