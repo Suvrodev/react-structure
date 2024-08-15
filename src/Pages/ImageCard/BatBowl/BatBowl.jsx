@@ -37,7 +37,7 @@ const BatBowl = () => {
         </div>
       </div>
 
-      <div className="my-20 flex gap-10">
+      <div className="my-20 flex flex-col md:flex-row items-center gap-10">
         <div className="Stag1">
           <div className="Stag1Bowl"></div>
         </div>
@@ -48,7 +48,7 @@ const BatBowl = () => {
 
       <div className="my-20 ">
         <h1 className="text-xl font-bold my-4">Progress</h1>
-        <div className="mx-20 mt-[200px] flex justify-around">
+        <div className="mx-20 mt-[200px] flex flex-col md:flex-row justify-around gap-20 md:gap-0 items-center">
           <div className="Round">
             <div className="top"></div>
             <div className="right"></div>

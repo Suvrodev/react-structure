@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import SamePageHeader from "./SamePageHeader/SamePageHeader";
 import { Link } from "react-scroll";
+import titleAndGoUp from "../../JSFile/titleAndGoUp";
 
 const SamePage = () => {
+  titleAndGoUp("Page");
   const text1 = `Dravid received his first call to the Indian national cricket team in October 1994 for the last two matches of the Wills World Series. However, he could not break into the playing eleven and had to return to the domestic circuit.[36] Despite a stellar show in domestic cricket, Dravid was not selected for the Indian team for the 1996 World Cup, prompting an Indian daily newspaper to run an article with the headline – "Rahul Dravid gets a raw deal".[37]
 
 He eventually made his international debut on 3 April 1996 in an ODI against Sri Lanka in the Singer Cup held in Singapore immediately after the 1996 World Cup, replacing Vinod Kambli.[38][39] He wasn't particularly successful with the bat, scoring only three runs before being dismissed by Muttiah Muralitharan, but took two catches in the match.[40] He followed it up with another failure in the next game, scoring only four runs before being run out against Pakistan.[40]

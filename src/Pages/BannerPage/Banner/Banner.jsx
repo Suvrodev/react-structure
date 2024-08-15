@@ -8,7 +8,6 @@ import { Typewriter } from "react-simple-typewriter";
 import titleAndGoUp from "../../../JSFile/titleAndGoUp";
 
 const Banner = () => {
-  titleAndGoUp("Banner");
   return (
     <div className={`w-full h-[200px] md:h-[500px] banner rounded-lg `}>
       <div className="flex h-full ">

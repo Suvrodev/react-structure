@@ -1,8 +1,10 @@
 import React, { useContext, useRef } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import emailjs from "@emailjs/browser";
+import titleAndGoUp from "../../JSFile/titleAndGoUp";
 
 const Contact = () => {
+  titleAndGoUp("Contact");
   const { successfullyToast } = useContext(AuthContext);
 
   const form = useRef();

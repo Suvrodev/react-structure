@@ -1,7 +1,9 @@
 import React, { useMemo, useRef, useState } from "react";
 import JoditEditor from "jodit-react";
+import titleAndGoUp from "../../JSFile/titleAndGoUp";
 
 const Blog = () => {
+  titleAndGoUp("Blog");
   const editor = useRef(null);
   const [content, setContent] = useState("");
 
