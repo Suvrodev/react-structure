@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import titleAndGoUp from "../../../JSFile/titleAndGoUp";
 import ImagesCard from "../ImagesCard/ImagesCard";
 import BatBowl from "../BatBowl/BatBowl";
+import MoonNight from "../MoonNight/MoonNight";
 
 const ImageCard = () => {
   titleAndGoUp("Image");
@@ -60,6 +61,12 @@ const ImageCard = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="my-20">
+          <MoonNight />
         </div>
       </section>
 

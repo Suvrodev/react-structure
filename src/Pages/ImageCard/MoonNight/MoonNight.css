@@ -1,0 +1,118 @@
+.sky {
+  width: 100%;
+  height: 750px;
+  background-image: url("../../../assets/moonNight/Sky.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.fairy {
+  position: absolute;
+  top: 100px;
+  right: 150px;
+  height: 250px;
+  transform: rotate(-40deg) scale(0.75);
+  opacity: 0.7;
+  animation: fairyanim 5s linear 0s infinite forwards;
+  animation-play-state: running;
+}
+@keyframes fairyanim {
+  0% {
+    top: 100px;
+  }
+  25% {
+    top: 125px;
+  }
+  50% {
+    top: 100px;
+  }
+  75% {
+    top: 75px;
+  }
+  100% {
+    top: 100px;
+  }
+}
+
+.prince {
+  position: absolute;
+  width: 350px;
+  /* height: 200px; */
+  transform: scaleX(-1);
+  bottom: -10px;
+  left: -10px;
+  animation: princeanim 20s linear 0s infinite forwards;
+  animation-play-state: running;
+}
+
+@keyframes princeanim {
+  0% {
+    bottom: -10px;
+    left: -10px;
+    width: 350px;
+    transform: scaleX(-1) rotate(0deg);
+  }
+  10% {
+    bottom: 400px;
+    left: 60%;
+    width: 120px;
+    transform: scaleX(-1) rotate(0deg);
+  }
+  20% {
+    bottom: 580px;
+    left: 60%;
+    width: 120px;
+    transform: scaleX(-1) rotate(-180deg);
+  }
+  30% {
+    bottom: 580px;
+    left: 85%;
+    width: 120px;
+    transform: scaleX(-1) rotate(-360deg);
+  }
+  40% {
+    bottom: 350px;
+    left: 85%;
+    width: 120px;
+    transform: scaleX(-1) rotate(-540deg);
+  }
+  50% {
+    bottom: 350px;
+    left: 60%;
+    width: 120px;
+    transform: scaleX(-1) rotate(-720deg);
+  }
+  60% {
+    bottom: 580px;
+    left: 60%;
+    width: 120px;
+    transform: scaleX(-1) rotate(-1080);
+  }
+  70% {
+    bottom: 580px;
+    left: 85%;
+    width: 120px;
+    transform: scaleX(-1) rotate(-1440deg);
+  }
+  80% {
+    bottom: 350px;
+    left: 85%;
+    width: 120px;
+    transform: scaleX(-1) rotate(-1880deg);
+  }
+  90% {
+    bottom: 350px;
+    left: 60%;
+    width: 120px;
+    opacity: 1;
+    transform: scaleX(-1) rotate(-2160deg);
+  }
+  100% {
+    opacity: 0;
+    bottom: 750px;
+    left: 100%;
+    width: 120px;
+    transform: scaleX(-1) rotate(-2160deg);
+  }
+}

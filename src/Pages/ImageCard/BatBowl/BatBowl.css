@@ -1,12 +1,305 @@
-.bat {
-  /* animation: flipSides 2s infinite alternate; */
-  transform: scaleX(-1);
+.field {
+  position: relative;
+  width: 100%;
+  height: 450px;
 }
-/* @keyframes flipSides {
+/* 1st Transition */
+.bat {
+  width: 350px;
+  height: 350px;
+  transition: all 0.2s ease-out;
+}
+
+.bowl {
+  width: 50px;
+  height: 50px;
+  background-color: #e90808;
+  border-radius: 50%;
+  position: absolute;
+  left: 406px;
+  bottom: 50px;
+  transition: all 0.4s ease-out 0.1s;
+}
+
+.field:hover .bat {
+  transform: rotate(-70deg);
+  transform-origin: top right;
+}
+.field:hover .bowl {
+  /* transform: translate(600px, -500px); */
+  left: 100%;
+  bottom: 100%;
+}
+
+/* 2nd Transition */
+.bat_2 {
+  width: 250px;
+  height: 250px;
+  transition: all 1s ease-out;
+}
+
+.bowl_2 {
+  width: 50px;
+  height: 50px;
+  background-color: #e90808;
+  border-radius: 50%;
+  position: absolute;
+  left: 180px;
+  bottom: 100px;
+  transition: all 0.4s ease-out 0.4s;
+}
+
+.field:hover .bat_2 {
+  transform: rotate(-70deg);
+  transform-origin: top right;
+}
+.field:hover .bowl_2 {
+  transform: translate(600px, -500px);
+  transform-origin: top right;
+}
+
+/* 3rd Transition */
+.bat_3 {
+  transform: scaleX(-1);
+  width: 250px;
+  height: 250px;
+  transition: all 1s ease-out;
+}
+
+.bowl_3 {
+  width: 50px;
+  height: 50px;
+  background-color: #e90808;
+  border-radius: 50%;
+  position: absolute;
+  left: 180px;
+  bottom: 100px;
+  transition: all 0.4s ease-out 0.4s;
+}
+
+.field:hover .bat_3 {
+  transform: rotate(70deg) scaleX(-1);
+  transform-origin: top right;
+}
+.field:hover .bowl_3 {
+  transform: translate(600px, -500px);
+  transform-origin: top right;
+}
+
+/* 4th Transition */
+.bat_4 {
+  width: 250px;
+  height: 250px;
+  transition: all 1s ease-out;
+  animation: batAnim 2s ease-in-out 0s infinite forwards;
+}
+
+.bowl_4 {
+  width: 50px;
+  height: 50px;
+  background-color: #e90808;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  animation: bowlAnim 2s ease-out 0s infinite forwards;
+}
+
+@keyframes batAnim {
   0% {
-    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: rotate(-70deg);
+    transform-origin: top right;
   }
   100% {
-    transform: translateX(-100%) scaleX(-1);
+    /* transform: rotate(360deg); */
   }
-} */
+}
+@keyframes bowlAnim {
+  0% {
+    right: 10px;
+    top: 10px;
+  }
+  50% {
+    right: 880px;
+    top: 300px;
+  }
+  100% {
+    right: 10px;
+    top: 10px;
+  }
+}
+
+/* Stage-1 Css */
+.Stag1 {
+  width: 300px;
+  height: 300px;
+  background-color: gold;
+  position: relative;
+}
+.Stag1Bowl {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: purple;
+  animation: sliding 2s ease-in-out 0.1s infinite forwards;
+  animation-play-state: running;
+}
+
+@keyframes sliding {
+  0% {
+    background-color: purple;
+    top: 0;
+    left: 0;
+  }
+  25% {
+    background-color: blue;
+    left: calc(100% - 50px);
+    top: 0;
+  }
+  50% {
+    background-color: green;
+    top: calc(100% - 50px);
+    left: calc(100% - 50px);
+  }
+  75% {
+    background-color: orangered;
+    top: calc(100% - 50px);
+    left: 0px;
+  }
+  100% {
+    background-color: purple;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Stage-2 Css */
+.Stag2 {
+  width: 1000px;
+  height: 300px;
+  background-color: gold;
+  border: var(--myborder);
+}
+.Stag2Bowl {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  animation: myanim 2s ease-in-out 0.1s infinite forwards;
+  animation-play-state: running;
+}
+
+@keyframes myanim {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: magenta;
+    top: 200px;
+    transform: scale(1.2) rotate(360deg);
+  }
+
+  50% {
+    background-color: orange;
+    top: 0px;
+    transform: scale(1.5) rotate(0deg);
+  }
+  75% {
+    background-color: purple;
+    top: 250px;
+    transform: scale(1.2) rotate(360deg);
+  }
+  100% {
+    background-color: red;
+    top: 0px;
+    left: 1000px;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* content Progress */
+.Round {
+  width: 250px;
+  height: 250px;
+  background-color: green;
+  position: relative;
+  border-radius: 50%;
+  animation: Ghoro 2s linear 0s infinite forwards;
+  animation-play-state: running;
+}
+@keyframes Ghoro {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.top {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.bottom {
+  width: 50px;
+  height: 50px;
+  background-color: purple;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.right {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.left {
+  width: 50px;
+  height: 50px;
+  background-color: lightseagreen;
+  border-radius: 50%;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* Hellow Progress */
+.heloProgress {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border-top: 50px solid yellow;
+  border-left: 50px solid orangered;
+  border-bottom: 50px solid green;
+  border-right: 50px solid transparent;
+  animation: helloAnim 4s ease-in 2s infinite forwards;
+}
+
+@keyframes helloAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
