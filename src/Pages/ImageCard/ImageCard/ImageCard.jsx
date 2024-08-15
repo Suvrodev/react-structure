@@ -5,6 +5,7 @@ import deer2 from "../../../assets/Deer/Deer2.png";
 
 import React, { useEffect, useState } from "react";
 import titleAndGoUp from "../../../JSFile/titleAndGoUp";
+import ImagesCard from "../ImagesCard/ImagesCard";
 
 const ImageCard = () => {
   titleAndGoUp("Image");
@@ -40,6 +41,24 @@ const ImageCard = () => {
         <div className="deerImages flex justify-between">
           <img src={deer1} alt="" className="deerImage shadow" />
           <img src={deer2} alt="" className="deerImage filterShadow" />
+        </div>
+      </section>
+
+      <section>
+        <div className="my-20">
+          <div className="flex flex-col gap-6">
+            {babyImages.map((baby, idx) => (
+              <div
+                id={`sticky-card-${idx + 1}`}
+                key={idx}
+                className="sticky-card w-full mx-auto max-w-2xl sticky"
+              >
+                <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
+                  <ImagesCard baby={baby} />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
