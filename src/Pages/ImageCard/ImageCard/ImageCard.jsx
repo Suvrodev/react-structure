@@ -8,9 +8,11 @@ import titleAndGoUp from "../../../JSFile/titleAndGoUp";
 import ImagesCard from "../ImagesCard/ImagesCard";
 import BatBowl from "../BatBowl/BatBowl";
 import MoonNight from "../MoonNight/MoonNight";
+import { Helmet } from "react-helmet-async";
 
 const ImageCard = () => {
-  titleAndGoUp("Image");
+  titleAndGoUp("Image Card");
+
   const [babyImages, setBabyImages] = useState([]);
   useEffect(() => {
     axios.get("/baby.json").then((res) => setBabyImages(res.data));
@@ -18,8 +20,16 @@ const ImageCard = () => {
   // console.log(babyImages);
   return (
     <div className="text-white">
+      {/* Helmet Section start */}
+
+      <meta
+        property="og:image"
+        content="https://i.ibb.co/T0wVnKf/Live-Class.jpg"
+      />
+
+      {/* Helmet Section end */}
       <section className="mt">
-        <h1 className="text-2xl font-bold my-10">Hover Image</h1>
+        <h1 className="text-2xl font-bold my-10">Make hover Image</h1>
 
         {/* <div className="my-20">
           <div className="menu-icon">

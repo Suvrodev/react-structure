@@ -1,11 +1,15 @@
 import React, { useMemo, useRef, useState } from "react";
-import JoditEditor from "jodit-react";
+import JoditEditor, { Jodit } from "jodit-react";
 import titleAndGoUp from "../../JSFile/titleAndGoUp";
 
 const Blog = () => {
   titleAndGoUp("Blog");
   const editor = useRef(null);
   const [content, setContent] = useState("");
+  // const editor = Jodit.make("#editor", {
+  //   autofocus: true,
+  //   spellcheck: true,
+  // });
 
   return (
     <div>
@@ -18,6 +22,7 @@ const Blog = () => {
           tabIndex={1}
           onChange={(newContent) => setContent(newContent)}
           className="text-black bg-white"
+          id="editor"
         />
       </div>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Banner.css";
 
 import bannerImage from "../../../assets/Banner/Banner.png";
@@ -8,8 +8,51 @@ import { Typewriter } from "react-simple-typewriter";
 import titleAndGoUp from "../../../JSFile/titleAndGoUp";
 
 const Banner = () => {
+  useEffect(() => {
+    // Set the document title
+    document.title = "Banner Title-1"; // Set the title for the page
+
+    // Set Open Graph meta tags
+    const metaTitle = document.querySelector('meta[property="og:title"]');
+    const metaDescription = document.querySelector(
+      'meta[property="og:description"]'
+    );
+    const metaImage = document.querySelector('meta[property="og:image"]');
+    const metaUrl = document.querySelector('meta[property="og:url"]');
+
+    // Create meta tags if they don't exist
+    if (!metaTitle) {
+      const newMetaTitle = document.createElement("meta");
+      newMetaTitle.setAttribute("property", "og:title");
+      newMetaTitle.content = "Banner Title-2"; // Updated title
+      document.head.appendChild(newMetaTitle);
+    }
+
+    if (!metaDescription) {
+      const newMetaDescription = document.createElement("meta");
+      newMetaDescription.setAttribute("property", "og:description");
+      newMetaDescription.content = "Banner Description"; // Updated description
+      document.head.appendChild(newMetaDescription);
+    }
+
+    if (!metaImage) {
+      const newMetaImage = document.createElement("meta");
+      newMetaImage.setAttribute("property", "og:image");
+      newMetaImage.content = "https://i.ibb.co.com/7XzmCg4/s2.jpg"; // Updated image
+      document.head.appendChild(newMetaImage);
+    }
+
+    if (!metaUrl) {
+      const newMetaUrl = document.createElement("meta");
+      newMetaUrl.setAttribute("property", "og:url");
+      newMetaUrl.content = "https://heroic-crepe-2ae4c9.netlify.app/banner"; // Page URL
+      document.head.appendChild(newMetaUrl);
+    }
+  }, []);
+
   return (
     <div className={`w-full h-[200px] md:h-[500px] banner rounded-lg `}>
+      <p>Banner</p>
       <div className="flex h-full ">
         <div className=" flex  justify-center items-center w-6/12 h-full z-10 text-white">
           <span className="font-bold text-orange-500 relative top-16 left-24">

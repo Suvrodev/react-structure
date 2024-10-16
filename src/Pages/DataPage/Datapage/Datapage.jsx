@@ -43,6 +43,38 @@ const Datapage = () => {
   //   console.log("Data: ", datas);
   //   console.log("Data Length: ", datas.length);
 
+  /**
+   * Link Preview Start
+   */
+  useEffect(() => {
+    // Set the document title
+    document.title = "Data Page";
+
+    // Set Open Graph meta tags
+    const metaTags = {
+      title: "New Title-God",
+      description: "New Description",
+      image: "https://i.ibb.co.com/dsThXBx/frontend-development-tools.png",
+      url: "https://heroic-crepe-2ae4c9.netlify.app/data",
+    };
+
+    // Function to set meta tags
+    const setMetaTags = (metaTags) => {
+      document.querySelector('meta[property="og:title"]').content =
+        metaTags.title;
+      document.querySelector('meta[property="og:description"]').content =
+        metaTags.description;
+      document.querySelector('meta[property="og:image"]').content =
+        metaTags.image;
+      document.querySelector('meta[property="og:url"]').content = metaTags.url;
+    };
+
+    setMetaTags(metaTags);
+  }, []);
+  /**
+   * Link Preview Endd
+   */
+
   if (datas.length == 0) {
     return (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -58,7 +90,7 @@ const Datapage = () => {
   //   console.log("Come Data: ", datas);
   return (
     <div className="text-white">
-      <h1 className="my-10 text-xl font-bold text-white">Data Page</h1>
+      <h1 className="my-10 text-xl font-bold text-white">Data Page (Okay)</h1>
       <div>
         {datas.length > 0 && (
           <div>
