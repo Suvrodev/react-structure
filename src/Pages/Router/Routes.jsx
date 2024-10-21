@@ -14,6 +14,8 @@ import PrivateRoute from "./PrivateRoute";
 import SamePage from "../SamePage/SamePage";
 import Blog from "../Blog/Blog";
 import Contact from "../Contact/Contact";
+import ModalPage from "../ModalPage/ModalPage/ModalPage";
+import ModalMainContent from "../ModalPage/ModalMainContent/ModalMainContent";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/modal",
+        element: <ModalMainContent />,
       },
       {
         path: "/contact",

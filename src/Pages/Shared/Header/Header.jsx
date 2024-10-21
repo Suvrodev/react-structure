@@ -74,6 +74,15 @@ const Header = () => {
             </NavLink>
           )}
 
+          {user && (
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
+              to="/modal"
+            >
+              Modal
+            </NavLink>
+          )}
+
           <NavLink
             className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
             to="/contact"

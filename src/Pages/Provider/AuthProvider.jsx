@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useRef, useState } from "react";
 import {
   getAuth,
   GoogleAuthProvider,
@@ -97,6 +97,8 @@ const AuthProvider = ({ children }) => {
   };
   /**Dark Light Mode end */
 
+  const modalRef = useRef(null);
+
   const authInfo = {
     user,
     loading,
@@ -106,6 +108,7 @@ const AuthProvider = ({ children }) => {
     handleSetLightMode,
     color,
     successfullyToast,
+    modalRef,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
