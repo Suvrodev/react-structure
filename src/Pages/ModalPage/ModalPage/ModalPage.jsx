@@ -9,10 +9,10 @@ const ModalPage = () => {
     }
   };
   return (
-    <div className="w-full h-[100vh] p-10">
-      <dialog ref={modalRef} className="modal">
+    <div className="w-full p-10">
+      <dialog ref={modalRef} className="modal ">
         {/* Modal Box Start */}
-        <div className="modal-box relative bg-white p-0">
+        <div className="modal-box relative bg-white p-0 max-w-[750px]">
           <div className="bg-blue-400 w-full h-[60px] flex items-center justify-center sticky top-0">
             <h1 className="text-white font-bold text-2xl  ">Title</h1>
             <form method="dialog" className="absolute top-0 right-0 ">
@@ -35,7 +35,7 @@ const ModalPage = () => {
       </dialog>
 
       {/* Open Modal Page start */}
-      <div className="w-full h-[450px] bg-white flex items-center justify-center">
+      <div className="w-full md:w-1/2 mx-auto h-[150px] bg-white flex items-center justify-center">
         <button className="btn btn-primary" onClick={handleModal}>
           Show Modal
         </button>

@@ -79,6 +79,13 @@ const MobileHeaderOption = ({ handleClick }) => {
 
         <NavLink
           className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
+          to="/modal"
+          onClick={() => handleClick(false)}
+        >
+          Modal
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
           to="/contact"
           onClick={() => handleClick(false)}
         >
