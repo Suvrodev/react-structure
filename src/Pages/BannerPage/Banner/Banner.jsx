@@ -52,10 +52,10 @@ const Banner = () => {
 
   return (
     <div className={`w-full h-[200px] md:h-[500px] banner rounded-lg `}>
-      <p>Banner</p>
       <div className="flex h-full ">
-        <div className=" flex  justify-center items-center w-6/12 h-full z-10 text-white">
-          <span className="font-bold text-orange-500 relative top-16 left-24">
+        {/* For Desktop Device       */}
+        <div className=" hidden md:flex  justify-center items-center w-full md:w-6/12 h-full  ">
+          <span className="font-bold text-purple-500 relative top-12 md:top-16 left-24">
             {/* Style will be inherited from the parent element */}
             <Typewriter
               words={[
@@ -71,6 +71,25 @@ const Banner = () => {
               delaySpeed={1000}
             />
           </span>
+        </div>
+        {/* For Mobile Device       */}
+        <div className=" md:hidden  justify-center items-center w-[100%] md:w-6/12 h-full  ">
+          <p className="font-bold text-purple-500 relative top-12 left-10">
+            {/* Style will be inherited from the parent element */}
+            <Typewriter
+              words={[
+                "Imagination is more important than knowledge",
+                "উঠ, জাগো, এবং লক্ষ্য অর্জন না হওয়া পর্যন্ত থেমো না।",
+                "You must be the change you wish to see in the world",
+              ]}
+              loop={5}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </p>
         </div>
         <div className="flex justify-center items-center w-6/12 h-full">
           <div className="w-[350px]">

@@ -146,21 +146,6 @@ const ModalMainContent = () => {
         </Slider>
       </div>
       {/* Computer SLider end*/}
-
-      <h1 className="my-4 p-5 text-center w-full md:w-1/2 bg-orange-500 text-white text-2xl font-bold mx-auto">
-        Slider-2
-      </h1>
-
-      <div className="bg-green-600">
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          {buttons.map((btn, idx) => (
-            <button className="btn" key={idx}>
-              {" "}
-              {btn}{" "}
-            </button>
-          ))}
-        </Swiper>
-      </div>
     </div>
   );
 };

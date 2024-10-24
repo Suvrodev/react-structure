@@ -16,7 +16,7 @@ const MobileHeaderOption = ({ handleClick }) => {
   };
 
   return (
-    <div className="bg-green-500 text-white flex flex-col gap-4 px-5 py-5">
+    <div className="bg-green-500 text-white flex flex-col gap-4 px-5 py-5 relative z-10">
       <div className="flex flex-col gap-4 font-bold w-full  ">
         <NavLink
           className={({ isActive }) => (isActive ? "text-blue-500" : "acLk ")}
@@ -46,6 +46,13 @@ const MobileHeaderOption = ({ handleClick }) => {
           onClick={() => handleClick(false)}
         >
           Image Card
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
+          to="/hdr"
+        >
+          Header
         </NavLink>
         {user && (
           <NavLink

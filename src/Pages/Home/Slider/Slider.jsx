@@ -55,7 +55,7 @@ const Slider = () => {
 
   return (
     <div
-      className="relative w-full h-[200px] md:h-[500px] overflow-hidden"
+      className="relative w-full h-[200px] md:h-[500px] overflow-hidden "
       onMouseDown={handleStart}
       onMouseMove={handleMove}
       onMouseUp={handleEnd}

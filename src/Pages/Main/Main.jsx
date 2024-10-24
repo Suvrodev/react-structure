@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../Shared/Header/Header";
 import MobileHeader from "../Shared/MobileHeader/MobileHeader";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -9,16 +9,21 @@ import CrispChat from "../../JSFile/CrispChat";
 
 const Main = () => {
   const { color } = useContext(AuthContext);
+
+  const path = useLocation()?.pathname;
+  console.log("Path: ", path);
   return (
-    <div className="overflow-hidden">
-      <div className="hidden md:block">
+    <div className="">
+      <div className="hidden md:block">{path == "/hdr" || <Header />}</div>
+      {/* <div className="hidden md:block">
         <Header />
-      </div>
+      </div> */}
       <div className="md:hidden">
-        <MobileHeader />
+        {/* <MobileHeader /> */}
+        {path == "/hdr" || <MobileHeader />}
       </div>
       <div
-        className={`max-w-7xl mx-auto mt-20 md:mt-0 ${
+        className={`max-w-7xl mx-auto mt-0 md:mt-0 ${
           color == "light" ? "bg-white" : ""
         }`}
       >

@@ -17,7 +17,7 @@ const Header = () => {
   };
   return (
     <div>
-      <div className="p-2  text-white  bg-[#0F172A] flex justify-between items-center px-10">
+      <div className="p-2  text-white  bg-[#0F172A] flex justify-between items-center px-10 relative z-10">
         <div className=" w-[25%]">
           <img src={me} alt="" className="w-[75px] h-[75px] rounded-full" />
         </div>
@@ -82,6 +82,13 @@ const Header = () => {
               Modal
             </NavLink>
           )}
+
+          <NavLink
+            className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}
+            to="/hdr"
+          >
+            Header
+          </NavLink>
 
           <NavLink
             className={({ isActive }) => (isActive ? "text-blue-500" : "lk")}

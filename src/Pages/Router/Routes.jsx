@@ -16,6 +16,7 @@ import Blog from "../Blog/Blog";
 import Contact from "../Contact/Contact";
 import ModalPage from "../ModalPage/ModalPage/ModalPage";
 import ModalMainContent from "../ModalPage/ModalMainContent/ModalMainContent";
+import HeaderPro from "../HeaderPro/HeaderPro";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/modal",
         element: <ModalMainContent />,
+      },
+      {
+        path: "/hdr",
+        element: <HeaderPro />,
       },
       {
         path: "/contact",

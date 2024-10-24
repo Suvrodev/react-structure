@@ -17,7 +17,7 @@ const MobileHeader = () => {
 
   return (
     <div className="relative">
-      <div className="absolute w-full z-30 flex justify-between items-center py-2 px-5 bg-[#0F172A]">
+      <div className="  w-full  flex justify-between items-center py-2 px-5 bg-[#0F172A] relative z-20">
         <img src={me} alt="" className=" w-[50px] h-[50px] rounded-full" />
         <div className="">
           <div
@@ -31,7 +31,7 @@ const MobileHeader = () => {
         </div>
       </div>
       <div
-        className={`absolute z-20  w-full transition-all duration-700 ${
+        className={`absolute  w-full transition-all duration-700 ${
           isOpen ? "top-[66px]" : "-top-[400px] "
         }`}
       >
